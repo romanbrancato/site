@@ -10,27 +10,31 @@ export default {
 		extend: {
 			animation: {
 				"fade-in": 'fade-in .5s ease-in-out',
-				"fade-in-up": 'fade-in-up .75s ease-in-out'
+				"fade-in-up-from-right": 'fade-in-up-from-right .5s ease-in-out',
 			},
 			keyframes: {
 				"fade-in": {
 					from: { opacity: "0" },
 					to: { opacity: "1" },
 				},
-				"fade-in-up": {
+				"fade-in-up-from-right": {
 					from: {
 						opacity: "0",
-						transform: 'translate3d(0, 40px, 0)'
+						transform: 'translate3d(40px, 40px, 0)'
 					},
 					to: {
 						opacity: "1",
 						transform: 'translate3d(0, 0, 0)'
 					}
-				}
+				},
+			},
+			transitionDelay: {
+				"400": "400ms"
 			},
 			colors: {
 				background: "var(--background)",
 				foreground: "var(--foreground)",
+				accent: "var(--accent-color)",
 			},
 		},
 	},
