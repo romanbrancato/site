@@ -26,6 +26,6 @@ export function Header({className = ""}: { className?: string }) {
                 <span>software developer at claimchoice</span>
             </div>
         </div>
-        <HoverText text={text} className="leading-relaxed text-gray-300 transition-colors duration-200 hover:text-foreground"/>
+        <HoverText text={text} className="leading-relaxed text-gray-300 transition-colors hover:duration-0 duration-1000 ease-out hover:text-accent"/>
     </header>)
 }

@@ -24,7 +24,7 @@ export function SectionList({section, items, className=""}: { section: string, i
                     <span> {item.period} </span>
                 </p>
             )}
-            <HoverText text={item.description} className="text-gray-300 transition-colors duration-200 hover:text-foreground"/>
+            <HoverText text={item.description} className="text-gray-300 transition-colors hover:duration-0 duration-1000 ease-out hover:text-foreground"/>
         </>
     );
 

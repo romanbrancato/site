@@ -27,7 +27,7 @@ export function ProjectSection({projects, className=""}: { projects: Project[], 
                     <span> {project.period} </span>
                 </p>
             )}
-            <HoverText text={project.description} className="text-gray-300 transition-colors duration-200 hover:text-foreground"/>
+            <HoverText text={project.description} className="text-gray-300 transition-colors hover:duration-0 duration-1000 ease-out hover:text-foreground"/>
             {project.tags.map((tag, index) => (
                 <label key={index}
                        className="inline-block bg-gray-400 bg-opacity-25 rounded text-xs mt-4 px-2 py-1 mr-1">
