@@ -1,4 +1,6 @@
 import Link from "next/link";
+import {ScrambleText} from "@/components/scramble-text";
+import {HoverText} from "@/components/hover-text";
 
 export type Item = {
     title: string
@@ -22,7 +24,7 @@ export function SectionList({section, items, className=""}: { section: string, i
                     <span> {item.period} </span>
                 </p>
             )}
-            <p className="text-gray-300">{item.description}</p>
+            <HoverText text={item.description} className="text-gray-300 transition-colors duration-200 hover:text-foreground"/>
         </>
     );
 
@@ -30,7 +32,7 @@ export function SectionList({section, items, className=""}: { section: string, i
         <section className={`mb-16 ${className}`}>
             <h2 className="text-2xl font-bold mb-6 flex items-center">
                 <span className="text-accent mr-2">{"&"}</span>
-                {section}
+                <ScrambleText text={section}/>
             </h2>
             <div className="space-y-8">
                 {items.map((item, index) => (

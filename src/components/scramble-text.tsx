@@ -5,11 +5,12 @@ import {useScramble} from "use-scramble"
 export function ScrambleText({
                                  text,
                                  className = "",
-                                 speed = 0.5,
+                                 speed = 1,
                                  tick = 1,
                                  step = 1,
                                  scramble = 5,
                                  seed = 3,
+                                 playOnMount = false,
                              }: {
     text: string
     className?: string
@@ -18,16 +19,18 @@ export function ScrambleText({
     step?: number
     scramble?: number
     seed?: number
+    playOnMount?: boolean
 }) {
-    const {ref} = useScramble({
+    const {ref, replay} = useScramble({
         text,
         speed,
         tick,
         step,
         scramble,
         seed,
+        playOnMount,
         overdrive: true,
     })
 
-    return <span ref={ref} className={className}/>
+    return <span ref={ref} onMouseOver={replay} onMouseLeave={replay} className={className}/>
 }

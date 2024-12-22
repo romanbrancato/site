@@ -1,5 +1,7 @@
 import Link from "next/link";
 import {ArrowUpRight} from "lucide-react";
+import {ScrambleText} from "@/components/scramble-text";
+import {HoverText} from "@/components/hover-text";
 
 type Project = {
     title: string
@@ -25,10 +27,10 @@ export function ProjectSection({projects, className=""}: { projects: Project[], 
                     <span> {project.period} </span>
                 </p>
             )}
-            <p className="text-gray-300">{project.description}</p>
+            <HoverText text={project.description} className="text-gray-300 transition-colors duration-200 hover:text-foreground"/>
             {project.tags.map((tag, index) => (
                 <label key={index}
-                       className="inline-block border border-gray-400 rounded text-xs mt-4 px-2 py-1 mr-1">
+                       className="inline-block bg-gray-400 bg-opacity-25 rounded text-xs mt-4 px-2 py-1 mr-1">
                     {tag}
                 </label>
             ))}
@@ -39,7 +41,7 @@ export function ProjectSection({projects, className=""}: { projects: Project[], 
         <section className={`mb-16 ${className}`}>
             <h2 className="text-2xl font-bold mb-6 flex items-center">
                 <span className="text-accent mr-2">{"&"}</span>
-                projects
+                <ScrambleText text={"projects"}/>
             </h2>
             <div className="space-y-8">
                 {projects.map((project, index) => (
