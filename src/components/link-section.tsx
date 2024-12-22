@@ -8,7 +8,7 @@ type Link = {
 export function LinkSection({links, className = ""}: { links: Link[], className?: string }) {
     return (
         <section className={`mb-16 space-y-4 ${className}`}>
-            <h2 className="text-2xl font-bold mb-6 flex items-center text-foreground">
+            <h2 className="text-2xl font-bold mb-6 flex items-center">
                 <span className="text-accent mr-2">{"&"}</span>
                 links
             </h2>

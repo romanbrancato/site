@@ -28,7 +28,7 @@ export function SectionList({section, items, className=""}: { section: string, i
 
     return (
         <section className={`mb-16 ${className}`}>
-            <h2 className="text-2xl font-bold mb-6 flex items-center text-foreground">
+            <h2 className="text-2xl font-bold mb-6 flex items-center">
                 <span className="text-accent mr-2">{"&"}</span>
                 {section}
             </h2>

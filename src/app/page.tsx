@@ -36,13 +36,13 @@ const links = [{
 
 export default function Home() {
     return (
-        <div className="min-h-screen antialiased font-[family-name:var(--font-geist-mono)]">
+        <div className="min-h-screen font-[family-name:var(--font-geist-mono)]">
             <main className="max-w-4xl mx-auto px-4 py-8">
                 <ContactSection/>
                 <Header className="animate-fade-in"/>
-                <SectionList section={"education"} items={education} className="animate-fade-in-up-from-right delay-100"/>
-                <SectionList section={"work"} items={work} className="animate-fade-in-up-from-right delay-200"/>
-                <ProjectSection projects={projects} className="animate-fade-in-up-from-right delay-300" />
+                <SectionList section={"work"} items={work} className="animate-fade-in-up-from-right delay-100"/>
+                <ProjectSection projects={projects} className="animate-fade-in-up-from-right delay-200" />
+                <SectionList section={"education"} items={education} className="animate-fade-in-up-from-right delay-300"/>
                 <LinkSection links={links} className="animate-fade-in-up-from-right delay-400"/>
             </main>
         </div>

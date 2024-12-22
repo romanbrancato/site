@@ -4,7 +4,7 @@ import {Building2, MapPin} from "lucide-react";
 export function Header({className = ""}: { className?: string }) {
     return (
         <header className={`mb-16 space-y-4 ${className}`}>
-            <h1 className="text-4xl font-bold mb-4 animate-fade-in text-foreground">
+            <h1 className="text-4xl font-bold mb-4 animate-fade-in">
                 <span className="inline-block">
                     <ScrambleText text={"roman brancato"}/>
                 </span>

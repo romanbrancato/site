@@ -14,7 +14,7 @@ export function ProjectSection({projects, className=""}: { projects: Project[], 
     const Content = ({project}: { project: Project }) => (
         <div className="group">
             <div
-                className={`flex flex-row items-center gap-x-2 text-xl font-semibold mb-1 text-foreground group-hover:text-accent transition-colors duration-200`}>
+                className={`flex flex-row items-center gap-x-2 text-xl font-semibold mb-1 group-hover:text-accent transition-colors duration-200`}>
                 {project.title}
                 <ArrowUpRight size={16} className="text-accent transform transition-transform group-hover:translate-x-[5px] group-hover:-translate-y-[5px]"/>
             </div>
@@ -25,10 +25,10 @@ export function ProjectSection({projects, className=""}: { projects: Project[], 
                     <span> {project.period} </span>
                 </p>
             )}
-            <p className="text-gray-300 mb-4">{project.description}</p>
+            <p className="text-gray-300">{project.description}</p>
             {project.tags.map((tag, index) => (
                 <label key={index}
-                       className="inline-block bg-gray-400 rounded text-xs px-2 py-1 mr-1">
+                       className="inline-block border border-gray-400 rounded text-xs mt-4 px-2 py-1 mr-1">
                     {tag}
                 </label>
             ))}
@@ -37,7 +37,7 @@ export function ProjectSection({projects, className=""}: { projects: Project[], 
 
     return (
         <section className={`mb-16 ${className}`}>
-            <h2 className="text-2xl font-bold mb-6 flex items-center text-foreground">
+            <h2 className="text-2xl font-bold mb-6 flex items-center">
                 <span className="text-accent mr-2">{"&"}</span>
                 projects
             </h2>
