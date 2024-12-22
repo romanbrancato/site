@@ -40,10 +40,10 @@ export default function Home() {
             <main className="max-w-4xl mx-auto px-4 py-8">
                 <ContactSection/>
                 <Header className="animate-fade-in"/>
-                <SectionList section={"work"} items={work} className="animate-fade-in-up-from-right delay-100"/>
-                <ProjectSection projects={projects} className="animate-fade-in-up-from-right delay-200" />
-                <SectionList section={"education"} items={education} className="animate-fade-in-up-from-right delay-300"/>
-                <LinkSection links={links} className="animate-fade-in-up-from-right delay-400"/>
+                <SectionList section={"work"} items={work} className="animate-fade-in-down delay-100"/>
+                <ProjectSection projects={projects} className="animate-fade-in-down delay-200" />
+                <SectionList section={"education"} items={education} className="animate-fade-in-down delay-300"/>
+                <LinkSection links={links} className="animate-fade-in-down delay-400"/>
             </main>
         </div>
     );
