@@ -1,7 +1,7 @@
 import Link from "next/link";
 import {ArrowUpRight} from "lucide-react";
 import {ScrambleText} from "@/components/scramble-text";
-import {HoverText} from "@/components/hover-text";
+import {SplitText} from "@/components/split-text";
 
 type Project = {
     title: string
@@ -14,7 +14,7 @@ type Project = {
 
 export function ProjectSection({projects, className=""}: { projects: Project[], className: string }) {
     const Content = ({project}: { project: Project }) => (
-        <div className="group">
+        <div className="group mb-4">
             <div
                 className={`flex flex-row items-center gap-x-2 text-xl font-semibold mb-1 group-hover:text-accent transition-colors duration-200`}>
                 {project.title}
@@ -27,10 +27,10 @@ export function ProjectSection({projects, className=""}: { projects: Project[], 
                     <span> {project.period} </span>
                 </p>
             )}
-            <HoverText text={project.description} className="text-gray-300 transition-colors hover:duration-0 duration-1000 ease-out hover:text-foreground"/>
+            <SplitText text={project.description} className="text-gray-300 transition-colors hover:duration-0 duration-1000 ease-out hover:text-foreground"/>
             {project.tags.map((tag, index) => (
                 <label key={index}
-                       className="inline-block bg-gray-400 bg-opacity-25 rounded text-xs mt-4 px-2 py-1 mr-1">
+                       className="inline-block bg-gray-400 bg-opacity-25 rounded text-xs mt-2 px-2 py-1 mr-1">
                     {tag}
                 </label>
             ))}

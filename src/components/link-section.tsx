@@ -3,7 +3,12 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import {ScrambleText} from '@/components/scramble-text';
 
-export function LinkSection({ links, className = "" }: { links: { label: string, href: string }[], className?: string }) {
+type Link = {
+    label: string;
+    href: string;
+};
+
+export function LinkSection({ links, className = "" }: { links: Link[], className?: string }) {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
     return (
