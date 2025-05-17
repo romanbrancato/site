@@ -19,9 +19,9 @@ export function Header({data, className = ""}: { data: Data, className?: string 
                 <span> {data.email} </span>
             </section>
             <header className={`mb-16 space-y-4 ${className}`}>
-                <h1 className="text-4xl font-bold mb-4 animate-fade-in">
+                <h1 className="text-4xl font-bold mb-4">
                 <span className="inline-block">
-                    <ScrambleText text={data.name} speed={0.5} playOnMount={true}/>
+                    <ScrambleText text={data.name} playOnMount={true}/>
                 </span>
                 </h1>
                 <div className="flex flex-col gap-2 text-gray-400">

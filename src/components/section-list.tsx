@@ -10,7 +10,7 @@ export type Item = {
     description: string
 }
 
-export function SectionList({section, items, className=""}: { section: string, items: Item[], className: string }) {
+export function SectionList({section, items}: { section: string, items: Item[]}) {
     const Content = ({item}: { item: Item }) => (
         <>
             <div
@@ -29,7 +29,7 @@ export function SectionList({section, items, className=""}: { section: string, i
     );
 
     return (
-        <section className={`mb-16 ${className}`}>
+        <section className={`mb-16`}>
             <h2 className="text-2xl font-bold mb-6 flex items-center">
                 <span className="text-accent mr-2">{"&"}</span>
                 <ScrambleText text={section}/>

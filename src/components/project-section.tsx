@@ -12,7 +12,7 @@ type Project = {
     href: string
 }
 
-export function ProjectSection({projects, className=""}: { projects: Project[], className: string }) {
+export function ProjectSection({projects}: { projects: Project[]}) {
     const Content = ({project}: { project: Project }) => (
         <div className="group mb-4">
             <div
@@ -38,7 +38,7 @@ export function ProjectSection({projects, className=""}: { projects: Project[], 
     );
 
     return (
-        <section className={`mb-16 ${className}`}>
+        <section className={`mb-16`}>
             <h2 className="text-2xl font-bold mb-6 flex items-center">
                 <span className="text-accent mr-2">{"&"}</span>
                 <ScrambleText text={"projects"}/>

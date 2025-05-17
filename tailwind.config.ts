@@ -8,29 +8,6 @@ export default {
 	],
 	theme: {
 		extend: {
-			animation: {
-				"fade-in": 'fade-in .5s ease-in-out',
-				"fade-in-down": 'fade-in-down .5s ease-in-out',
-			},
-			keyframes: {
-				"fade-in": {
-					from: { opacity: "0" },
-					to: { opacity: "1" },
-				},
-				"fade-in-down": {
-					from: {
-						opacity: "0",
-						transform: 'translate3d(0, -50px, 0)'
-					},
-					to: {
-						opacity: "1",
-						transform: 'translate3d(0, 0, 0)'
-					}
-				},
-			},
-			transitionDelay: {
-				"400": "400ms"
-			},
 			colors: {
 				background: "var(--background)",
 				foreground: "var(--foreground)",
